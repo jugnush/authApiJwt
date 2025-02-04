@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../models/user');
+const Task = require('../models/Task');
 
 
 const router = express.Router();
@@ -18,7 +18,7 @@ router.post ('/', async (req, res) => {
 
     const body = req.body;
 
-   const result = await User.create({
+   const result = await Task.create({
         firstName: body.firstName,
         LastName: body.LastName,
         email: body.email,
